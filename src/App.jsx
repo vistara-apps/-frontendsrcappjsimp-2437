@@ -9,7 +9,7 @@ function App() {
   const [error, setError] = useState('');
   const [initializing, setInitializing] = useState(true);
 
-  const backendUrl = 'http://localhost:5000';
+  const backendUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
   // Check for existing token on app load
   useEffect(() => {
