@@ -4,6 +4,7 @@ import Header from './Header';
 import KPICards from './KPICards';
 import SalesChart from './SalesChart';
 import TransactionsTable from './TransactionsTable';
+import AnalyticsOverview from './AnalyticsOverview';
 import LoadingSpinner from './LoadingSpinner';
 
 const Dashboard = ({ user, onLogout, backendUrl }) => {
@@ -98,6 +99,13 @@ const Dashboard = ({ user, onLogout, backendUrl }) => {
           </div>
 
           <TransactionsTable transactions={transactions} />
+          
+          <div className="mt-8">
+            <h2 className="text-xl font-semibold text-gray-900 mb-6">
+              Analytics Overview
+            </h2>
+            <AnalyticsOverview backendUrl={backendUrl} />
+          </div>
         </div>
       </main>
     </div>
